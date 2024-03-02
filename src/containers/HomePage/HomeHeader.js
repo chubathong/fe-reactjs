@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo_460x.avif'
 import { FormattedMessage } from 'react-intl';
 import { languages } from '../../utils';
 import { changeLanguageApp } from '../../store/actions';

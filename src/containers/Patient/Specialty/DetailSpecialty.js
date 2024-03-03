@@ -28,12 +28,11 @@ class DetailSpecialty extends Component {
             let resProvince = await getAllCode('PROVINCE')
             if (res && res.errorCode === 0 && resProvince && resProvince.errorCode === 0) {
                 let data = res.data;
-                console.log('data doctorId ', data)
                 let arrDoctorIds = [];
                 if (data && !_.isEmpty(res.data)) {
                     let arr = data.doctorSpecialty;
                     if (arr && arr.length > 0) {
-                        arr.map(item => {
+                        arr.forEach(item => {
                             arrDoctorIds.push(item.doctorId)
                         })
                     }
@@ -78,7 +77,7 @@ class DetailSpecialty extends Component {
                 if (data && !_.isEmpty(res.data)) {
                     let arr = data.doctorSpecialty;
                     if (arr && arr.length > 0) {
-                        arr.map(item => {
+                        arr.forEach(item => {
                             arrDoctorId.push(item.doctorId)
                         })
                     }
@@ -92,9 +91,7 @@ class DetailSpecialty extends Component {
     }
 
     render() {
-
         let { arrDoctorId, dataDetailSpecialty, listProvince } = this.state;
-        console.log('doctor id', this.state)
         let { language } = this.props;
         return (
             <div className='detail-specialty-container'>

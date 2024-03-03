@@ -115,9 +115,6 @@ class ManagePatient extends Component {
                     spinner
                     text='Loading...'
                 >
-
-
-
                     <div className='manage-patient-container'>
                         <div className='m-p-title'>Quản lý bệnh nhân khám bệnh</div>
                         <div className='manage-patient-body row'>
@@ -154,8 +151,8 @@ class ManagePatient extends Component {
                                                     <tr key={index}>
                                                         <td>{index + 1}</td>
                                                         <td>{time}</td>
-                                                        <td>{item.patientData.firstName}</td>
-                                                        <td>{item.patientData.address}</td>
+                                                        <td>{item.patientData ? item.patientData.firstName : ''}</td>
+                                                        <td>{item.patientData ? item.patientData.address : ''}</td>
                                                         <td>{gender}</td>
                                                         <td>
                                                             <button className='mp-btn-confirm'

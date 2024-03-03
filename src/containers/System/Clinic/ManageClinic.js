@@ -5,7 +5,7 @@ import { CommonUtils } from '../../../utils';
 import { toast } from 'react-toastify';
 import MdEditor from 'react-markdown-editor-lite'
 import './ManageClinic.scss'
-import { createNewClinic, createNewSpecialty } from '../../../services/userService';
+import { createNewClinic } from '../../../services/userService';
 
 const mdParser = new MarkdownIt();
 class ManageClinic extends Component {

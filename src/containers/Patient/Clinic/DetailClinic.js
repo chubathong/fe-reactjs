@@ -6,8 +6,7 @@ import DoctorExtraInfor from '../Doctor/DoctorExtraInfor';
 import DoctorSchedule from '../Doctor/DoctorSchedule';
 import ProfileDoctor from '../Doctor/ProfileDoctor';
 import _ from 'lodash';
-import { getAllCode, getAllDetailClinicById } from '../../../services/userService';
-import { languages } from '../../../utils';
+import { getAllDetailClinicById } from '../../../services/userService';
 class DetailClinic extends Component {
 
     constructor(props) {
@@ -30,7 +29,7 @@ class DetailClinic extends Component {
                 if (data && !_.isEmpty(res.data)) {
                     let arr = data.doctorClinic;
                     if (arr && arr.length > 0) {
-                        arr.map(item => {
+                        arr.forEach(item => {
                             arrDoctorId.push(item.doctorId)
                         })
                     }
@@ -64,7 +63,7 @@ class DetailClinic extends Component {
                 if (data && !_.isEmpty(res.data)) {
                     let arr = data.doctorSpecialty;
                     if (arr && arr.length > 0) {
-                        arr.map(item => {
+                        arr.forEach(item => {
                             arrDoctorId.push(item.doctorId)
                         })
                     }
@@ -80,7 +79,7 @@ class DetailClinic extends Component {
     render() {
 
         let { arrDoctorId, dataDetailClinic } = this.state;
-        let { language } = this.props;
+        //let { language } = this.props;
         return (
             <div className='detail-specialty-container'>
                 <HomeHeader />

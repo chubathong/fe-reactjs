@@ -4,7 +4,6 @@ import './DoctorSchedule.scss'
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { languages } from '../../../utils';
 import moment from 'moment/moment';
-import localization from 'moment/locale/vi';
 import { FormattedMessage } from 'react-intl';
 import BookingModal from './Modal/BookingModal';
 class DoctorSchedule extends Component {
@@ -97,7 +96,6 @@ class DoctorSchedule extends Component {
             isOpenModalBooking: true,
             dataScheduleTimeModal: time
         })
-        console.log('time: ', time)
     }
     closeBookingClose = () => {
         this.setState({

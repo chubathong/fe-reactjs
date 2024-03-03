@@ -202,7 +202,6 @@ class UserRedux extends Component {
         let positions = this.state.positionArr;
 
         let { email, password, firstName, lastName, phoneNumber, address, gender, role, position } = this.state;
-        //console.log('gender redux roles check', roles)
         return (
             <div className='user-redux-container'>
                 <div className='title'>Phát Booking care</div>

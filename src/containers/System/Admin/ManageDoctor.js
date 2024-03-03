@@ -54,14 +54,20 @@ class TableManageDoctor extends Component {
         this.props.getAllRequiredDoctorInfor();
     }
 
-
-
     buildDataInputSelect = (inputData, type) => {
         let result = [];
         let language = this.props.language;
         if (inputData && inputData.length > 0) {
             if (type === 'USERS') {
-                inputData.map((item, index) => {
+                // inputData.map((item, index) => {
+                //     let object = {};
+                //     let labelVi = `${item.lastName} ${item.firstName}`;
+                //     let labelEn = `${item.firstName} ${item.lastName}`;
+                //     object.label = language === languages.VI ? labelVi : labelEn;
+                //     object.value = item.id;
+                //     result.push(object)
+                // })
+                inputData.forEach((item, index) => {
                     let object = {};
                     let labelVi = `${item.lastName} ${item.firstName}`;
                     let labelEn = `${item.firstName} ${item.lastName}`;
@@ -71,7 +77,7 @@ class TableManageDoctor extends Component {
                 })
             }
             if (type === 'PRICE') {
-                inputData.map((item, index) => {
+                inputData.forEach((item, index) => {
                     let object = {};
                     let labelVi = `${item.valueVi}`;
                     let labelEn = `${item.valueEn} USD`;
@@ -81,7 +87,7 @@ class TableManageDoctor extends Component {
                 })
             }
             if (type === 'PAYMENT' || type === 'PROVINCE') {
-                inputData.map((item, index) => {
+                inputData.forEach((item, index) => {
                     let object = {};
                     let labelVi = `${item.valueVi}`;
                     let labelEn = `${item.valueEn}`;
@@ -91,7 +97,7 @@ class TableManageDoctor extends Component {
                 })
             }
             if (type === 'SPECIALTY') {
-                inputData.map((item, index) => {
+                inputData.forEach((item, index) => {
                     let object = {};
                     object.label = item.name;
                     object.value = item.id;
@@ -99,7 +105,7 @@ class TableManageDoctor extends Component {
                 })
             }
             if (type === 'CLINIC') {
-                inputData.map((item, index) => {
+                inputData.forEach((item, index) => {
                     let object = {};
                     object.label = item.name;
                     object.value = item.id;
@@ -152,7 +158,6 @@ class TableManageDoctor extends Component {
             contentMarkdown: text,
             contentHTML: html
         })
-        console.log('handleEditorChange', html, text);
     }
     handleSaveContentMarkDown = () => {
         let { hasOldData } = this.state
@@ -173,7 +178,6 @@ class TableManageDoctor extends Component {
             clinicId: this.state.selectedClinic && this.state.selectedClinic.value ? this.state.selectedClinic.value : '',
             specialtyId: this.state.selectedSpecialty.value
         })
-        console.log('check data save doctor', this.props)
 
         this.setState({
             contentMarkdown: '',
@@ -249,7 +253,6 @@ class TableManageDoctor extends Component {
                 selectedClinic: ''
             })
         }
-        console.log('check manage doc ', res.data.Markdown)
     };
     handleOnChangeDesc = (event) => {
         this.setState({

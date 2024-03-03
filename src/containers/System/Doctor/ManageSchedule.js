@@ -45,7 +45,7 @@ class ManageSchedule extends Component {
         let result = [];
         let { language } = this.props;
         if (inputData && inputData.length > 0) {
-            inputData.map((item, index) => {
+            inputData.forEach((item, index) => {
                 let object = {};
                 let labelVi = `${item.lastName} ${item.firstName}`;
                 let labelEn = `${item.firstName} ${item.lastName}`
@@ -92,7 +92,7 @@ class ManageSchedule extends Component {
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected === true);//lọc date đã chọn
             if (selectedTime && selectedTime.length > 0) {
-                selectedTime.map((schedule, index) => {
+                selectedTime.forEach((schedule, index) => {
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;

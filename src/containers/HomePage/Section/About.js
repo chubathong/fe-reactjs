@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from '../../../assets/logo_460x.avif'
 class About extends Component {
     render() {
         return (
@@ -20,8 +19,6 @@ class About extends Component {
                             </iframe>
                         </div>
                         <div className='content-right'>
-
-
                             <p>Healthy Care được thành lập vào năm 2006 và hiện là một trong những thương hiệu chăm sóc sức khỏe tự nhiên hàng đầu của Úc với cơ sở sản xuất hiện đại nằm giữa hai Công viên Quốc gia độc đáo nhất của Úc trên những bãi biển mang tính biểu tượng phía Bắc.</p>
                         </div>
                     </div>

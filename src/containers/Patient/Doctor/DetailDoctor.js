@@ -27,7 +27,6 @@ class DetailDoctor extends Component {
                     detailDoctor: res.data
                 })
             }
-            //console.log('detail doc: ', res)
         }
     }
     componentDidUpdate(prevProps, prevState, snapshot) {

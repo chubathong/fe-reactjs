@@ -47,7 +47,7 @@ class RemedyModal extends Component {
 
     render() {
 
-        let { isOpenModal, dataModal, closeRemedyModal, sendRemedy } = this.props
+        let { isOpenModal, closeRemedyModal, dataModal, sendRemedy } = this.props
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -60,7 +60,7 @@ class RemedyModal extends Component {
                         Gửi hoá đơn khám bệnh thành công
                     </h5>
 
-                    <button className="close" onClick={closeRemedyModal} type='button' aria-label='Close'>
+                    <button type='button' className="close" aria-label='Close' onClick={closeRemedyModal}>
                         <span aria-hidden="true">x</span>
                     </button>
 

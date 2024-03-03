@@ -41,9 +41,7 @@ class VerifyEmail extends Component {
     }
 
     render() {
-
-        console.log('check errorcode ,', this.state)
-        let { statusVerify, errorCode } = this.state;
+        let { statusVerify } = this.state;
         return (
             <>
                 <HomeHeader />
@@ -54,10 +52,7 @@ class VerifyEmail extends Component {
                         </div>
                         :
                         <div>
-                            {errorCode === 0 ?
-                                <div className='info-booking'>Xác định lịch hẹn thành công!</div> :
-                                <div className='info-booking'>Lịch hẹn không tồn tại hoặc đã được xác nhận</div>
-                            }
+                            <div className='info-booking'>Xác định lịch hẹn thành công!</div>
                         </div>
                     }
                 </div>
